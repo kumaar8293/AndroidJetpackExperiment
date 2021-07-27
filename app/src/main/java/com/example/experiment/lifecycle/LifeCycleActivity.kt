@@ -13,6 +13,7 @@ class LifeCycleActivity : AppCompatActivity() {
         binding = ActivityLifeCycleBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        //Attaching observer to he activity
         lifecycle.addObserver(MyObserver())
     }
 }

@@ -12,8 +12,33 @@ import androidx.lifecycle.OnLifecycleEvent
  */
 class MyObserver : LifecycleObserver {
 
+    @OnLifecycleEvent(Lifecycle.Event.ON_START)
+    fun onStart() {
+        // Initialize something
+    }
+
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
         // Fetch user location
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)
+    fun onResume() {
+        // Resume location
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_PAUSE)
+    fun onPause() {
+        // Stop fetching location
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_STOP)
+    fun onStop() {
+        // Stop observer
+    }
+
+    @OnLifecycleEvent(Lifecycle.Event.ON_DESTROY)
+    fun onDestroy() {
+        // Cancel fetching location
     }
 }
