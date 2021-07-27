@@ -1,5 +1,6 @@
 package com.example.experiment.lifecycle
 
+import android.util.Log
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleObserver
 import androidx.lifecycle.OnLifecycleEvent
@@ -14,12 +15,14 @@ class MyObserver : LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_START)
     fun onStart() {
+        Log.d("MyObserver", "onStart: ")
         // Initialize something
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun onCreate() {
         // Fetch user location
+        Log.d("MyObserver", "onCreate: ")
     }
 
     @OnLifecycleEvent(Lifecycle.Event.ON_RESUME)

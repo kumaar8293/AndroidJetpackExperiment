@@ -1,5 +1,6 @@
 package com.example.experiment.ui.main
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider
 import com.example.experiment.R
 import com.example.experiment.databinding.LinearFieldViewBinding
 import com.example.experiment.databinding.MainFragmentBinding
+import com.example.experiment.lifecycle.LifeCycleActivity
 
 class MainFragment : Fragment() {
 
@@ -33,6 +35,9 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
         binding.btnAdd.setOnClickListener {
             addView()
+        }
+        binding.btnLifecycle.setOnClickListener {
+            startActivity(Intent(context, LifeCycleActivity::class.java))
         }
     }
 
