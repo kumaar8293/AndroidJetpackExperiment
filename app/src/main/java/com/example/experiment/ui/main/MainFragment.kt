@@ -45,7 +45,8 @@ class MainFragment : Fragment() {
 
          * P.S:- it is the factory that creates viewmodel object. **/
 
-        viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
+        val mainViewModelFactory = MainViewModelFactory(10)
+        viewModel = ViewModelProvider(this, mainViewModelFactory).get(MainViewModel::class.java)
         binding.btnAddView.setOnClickListener {
             addView()
         }
