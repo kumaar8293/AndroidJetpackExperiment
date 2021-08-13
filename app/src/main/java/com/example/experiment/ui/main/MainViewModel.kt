@@ -2,6 +2,6 @@ package com.example.experiment.ui.main
 
 import androidx.lifecycle.ViewModel
 
-class MainViewModel : ViewModel() {
-    var counter = 0
+class MainViewModel(initialValue: Int) : ViewModel() {
+    var counter = initialValue
 }
