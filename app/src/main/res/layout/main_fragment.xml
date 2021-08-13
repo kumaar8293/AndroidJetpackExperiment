@@ -28,21 +28,33 @@
         android:id="@+id/name_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="16dp"
         android:orientation="vertical" />
 
     <Button
-        android:id="@+id/btn_add"
+        android:id="@+id/btn_add_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:text="Add" />
+
+    <TextView
+        android:id="@+id/tv_counter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="dasdasd" />
+
+    <Button
+        android:id="@+id/btn_addition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add++" />
 
     <Button
         android:id="@+id/btn_lifecycle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:text="Open Lifecycle Page" />
 
 </androidx.appcompat.widget.LinearLayoutCompat>
